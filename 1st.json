@@ -1,0 +1,103 @@
+{
+  "queryPlanner": {
+    "plannerVersion": 1,
+    "namespace": "practice.users",
+    "indexFilterSet": false,
+    "parsedQuery": {},
+    "winningPlan": {
+      "stage": "COLLSCAN",
+      "direction": "forward"
+    },
+    "rejectedPlans": []
+  },
+  "executionStats": {
+    "executionSuccess": true,
+    "nReturned": 10000028,
+    "executionTimeMillis": 2213,
+    "totalKeysExamined": 0,
+    "totalDocsExamined": 10000028,
+    "executionStages": {
+      "stage": "COLLSCAN",
+      "nReturned": 10000028,
+      "executionTimeMillisEstimate": 1760,
+      "works": 10000030,
+      "advanced": 10000028,
+      "needTime": 1,
+      "needYield": 0,
+      "saveState": 78125,
+      "restoreState": 78125,
+      "isEOF": 1,
+      "invalidates": 0,
+      "direction": "forward",
+      "docsExamined": 10000028
+    },
+    "allPlansExecution": []
+  },
+  "serverInfo": {
+    "host": "sagar-khatri",
+    "port": 27017,
+    "version": "3.6.8",
+    "gitVersion": "8e540c0b6db93ce994cc548f000900bdc740f80a"
+  },
+  "ok": 1
+}
+
+{
+    "queryPlanner": {
+        "plannerVersion": 1,
+        "namespace": "practice.users",
+        "indexFilterSet": false,
+        "parsedQuery": {
+            "name": {
+                "$eq": "user1"
+            }
+        },
+        "winningPlan": {
+            "stage": "COLLSCAN",
+            "filter": {
+                "name": {
+                    "$eq": "user1"
+                }
+            },
+            "direction": "forward"
+        },
+        "rejectedPlans": []
+    },
+    "executionStats": {
+        "executionSuccess": true,
+        "nReturned": 1,
+        "executionTimeMillis": 2593,
+        "totalKeysExamined": 0,
+        "totalDocsExamined": 10000028,
+        "executionStages": {
+            "stage": "COLLSCAN",
+            "filter": {
+                "name": {
+                    "$eq": "user1"
+                }
+            },
+            "nReturned": 1,
+            "executionTimeMillisEstimate": 2290,
+            "works": 10000030,
+            "advanced": 1,
+            "needTime": 10000028,
+            "needYield": 0,
+            "saveState": 78125,
+            "restoreState": 78125,
+            "isEOF": 1,
+            "invalidates": 0,
+            "direction": "forward",
+            "docsExamined": 10000028
+        },
+        "allPlansExecution": []
+    },
+    "serverInfo": {
+        "host": "sagar-khatri",
+        "port": 27017,
+        "version": "3.6.8",
+        "gitVersion": "8e540c0b6db93ce994cc548f000900bdc740f80a"
+    },
+    "ok": 1
+}
+
+
